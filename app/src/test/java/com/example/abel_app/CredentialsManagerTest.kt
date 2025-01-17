@@ -1,4 +1,4 @@
-package com.example.tino_app
+package com.example.abel_app
 
 import junit.framework.TestCase.assertEquals
 import org.junit.Test

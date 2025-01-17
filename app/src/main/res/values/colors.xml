@@ -1,0 +1,9 @@
+<resources>
+    <color name="primaryColor">#6C63FF</color>
+    <color name="primaryDarkColor">#4A4A4A</color>
+    <color name="secondaryColor">#FFC107</color>
+    <color name="secondaryDarkColor">#FFA000</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

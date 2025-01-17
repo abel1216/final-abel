@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -23,7 +24,7 @@
         android:id="@+id/getStartedText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/L_WelcomeBack"
+        android:text="@string/login_welcome_back"
         android:textColor="@android:color/black"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -36,14 +37,14 @@
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/L_AccessYourAccount"
+        android:text="@string/login_access_account"
         android:textColor="#757575"
         android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@id/getStartedText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Email Input Layout -->
+    <!-- Email Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
         android:layout_width="0dp"
@@ -56,11 +57,11 @@
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/L_EnterMail"
+            android:hint="@string/login_enter_mail"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Password Input Layout -->
+    <!-- Password Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
         android:layout_width="0dp"
@@ -73,64 +74,20 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/L_EnterPassword"
+            android:hint="@string/login_enter_password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Remember Me & Forgot Password -->
-    <CheckBox
-        android:id="@+id/termsCheckbox"
-        android:layout_width="wrap_content"
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/L_RememberMe"
-        android:textSize="11sp"
+        android:backgroundTint="@color/primaryColor"
+        android:text="@string/login_button"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
 
-    <!-- forgot Button -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/L_ForgetPassword"
-        android:textColor="#2962FF"
-        android:textSize="11sp"
-        app:layout_constraintStart_toEndOf="@id/termsCheckbox"
-        app:layout_constraintTop_toTopOf="@id/termsCheckbox" />
-
-    <Button
-        android:id="@+id/loggingButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#6C63FF"
-        android:text="@string/login"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/termsCheckbox" />
-
-    <!-- Registration Section -->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/L_NewMember"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="592dp" />
-
-    <TextView
-        android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/L_registerNow"
-        android:textColor="#6C63FF"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="588dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

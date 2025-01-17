@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tino_app"
+    namespace = "com.example.abel_app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tino_app"
+        applicationId = "com.example.abel_app"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -39,6 +39,8 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.fragment)
+    implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

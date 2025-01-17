@@ -1,5 +1,5 @@
 // CredentialsManager.kt
-package com.example.tino_app
+package com.example.abel_app
 
 class CredentialsManager {
 

@@ -1,5 +1,5 @@
 // LoginActivity.kt
-package com.example.tino_app
+package com.example.abel_app
 
 import android.content.Intent
 import android.os.Bundle

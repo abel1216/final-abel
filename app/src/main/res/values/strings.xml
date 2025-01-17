@@ -1,28 +1,26 @@
 <resources>
-    <string name="app_name">tino_app</string>
+    <string name="app_name">YourApp</string>
     <string name="get_started">Get Started</string>
-    <string name="R_Name">Full name</string>
-    <string name="R_Email">Valid email</string>
-    <string name="R_number">Phone number</string>
-    <string name="R_password">Strong Password</string>
-    <string name="R_CheckBox">By checking the box you agree to our</string>
-    <string name="R_Terms">Terms and Conditions.</string>
-    <string name="R_Next">Next ></string>
-    <string name="R_AlreadyMem">Already a member?</string>
-    <string name="R_LogInButton"> Log In</string>
-    <string name="R_CreatingFreeAcc">by creating a free account.</string>
-    <string name="L_WelcomeBack">Welcome Back</string>
-    <string name="L_AccessYourAccount">sign in to access your account</string>
-    <string name="L_EnterPassword">Enter Password</string>
-    <string name="L_EnterMail">Enter mail</string>
-    <string name="L_RememberMe">Remember me</string>
-    <string name="L_ForgetPassword">Forget password?</string>
-    <string name="L_NewMember">New member?</string>
-    <string name="L_registerNow"> Register now</string>
-    <string name="welcome_image_description" />
+    <string name="full_name_hint">Full name</string>
+    <string name="email_hint">Valid email</string>
+    <string name="phone_number_hint">Phone number</string>
+    <string name="registration_password">Strong Password</string>
+    <string name="registration_checkbox">By checking the box you agree to our</string>
+    <string name="registration_terms">Terms and Conditions.</string>
+    <string name="registration_next">Next ></string>
+    <string name="registration_already_member">Already a member?</string>
+    <string name="registration_login_button">Log In</string>
+    <string name="registration_creating_free_account">By creating a free account.</string>
+    <string name="login_welcome_back">Welcome Back</string>
+    <string name="login_access_account">Sign in to access your account</string>
+    <string name="login_enter_password">Enter Password</string>
+    <string name="login_enter_mail">Enter mail</string>
+    <string name="login_remember_me">Remember me</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_new_member">New member?</string>
+    <string name="login_register_now">Register now</string>
+    <string name="welcome_image_description">A welcoming illustration for new users</string>
     <string name="error_message">Error message</string>
-    <string name="login">Login</string>
+    <string name="login_button">Login</string>
     <string name="welcome_to_main_activity">WELCOME TO THE APP</string>
-
-
 </resources>

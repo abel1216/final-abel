@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "tino_app"
+rootProject.name = "abel_app"
 include(":app")
  

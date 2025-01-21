@@ -1,4 +1,4 @@
-package com.example.abel_app.adapters
+package com.example.abel_app
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.abel_app.R
-import com.example.abel_app.models.Recipe
 
 class RecipeAdapter : ListAdapter<Recipe, RecipeAdapter.RecipeViewHolder>(DIFF_CALLBACK) {
 

@@ -1,9 +1,9 @@
 <resources>
-    <color name="primaryColor">#6C63FF</color>
-    <color name="primaryDarkColor">#4A4A4A</color>
-    <color name="secondaryColor">#FFC107</color>
-    <color name="secondaryDarkColor">#FFA000</color>
-    <color name="backgroundColor">#FFFFFF</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 </resources>

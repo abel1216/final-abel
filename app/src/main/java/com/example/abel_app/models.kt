@@ -1,4 +1,4 @@
-package com.example.abel_app.models
+package com.example.abel_app
 
 data class Recipe(
     val id: Int,

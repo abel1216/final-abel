@@ -1,59 +1,61 @@
-package com.example.abel_app.fragments
+package com.example.abel_app
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.abel_app.R
-import com.example.abel_app.viewmodels.RecipeViewModel
-import com.example.abel_app.adapters.RecipeAdapter
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class RecipeFragment : Fragment(R.layout.fragment_recipe) {
+class RecipeFragment : Fragment() {
 
-    private val viewModel: RecipeViewModel by viewModels()
+    private lateinit var recipeAdapter: RecipeAdapter
+    private val viewModel = RecipeViewModel()
 
-    private lateinit var searchView: SearchView
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: RecipeAdapter
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_recipe, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        searchView = view.findViewById(R.id.searchView)
-        recyclerView = view.findViewById(R.id.recipeRecyclerView)
-
-        adapter = RecipeAdapter()
-        recyclerView.adapter = adapter
+        // RecyclerView setup
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recipeRecyclerView)
+        recipeAdapter = RecipeAdapter()
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = recipeAdapter
 
-        // Observe filtered recipes
-        lifecycleScope.launch {
-            viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.getFilteredRecipes().collect { filteredRecipes ->
-                    if (filteredRecipes != adapter.currentList) {
-                        adapter.submitList(filteredRecipes)
-                    }
-                }
-            }
-        }
-
-        // Handle search query
+        // SearchView setup
+        val searchView = view.findViewById<SearchView>(R.id.searchView)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
+                query?.let {
+                    viewModel.setQuery(it)
+                }
+                return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                viewModel.setQuery(newText.orEmpty())
+                newText?.let {
+                    viewModel.setQuery(it)
+                }
                 return true
             }
         })
+
+        // Observe filtered recipes
+        lifecycleScope.launch {
+            viewModel.getFilteredRecipes().collectLatest { recipes ->
+                recipeAdapter.submitList(recipes)
+            }
+        }
+
+        return view
     }
 }
+
